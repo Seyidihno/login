@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>Login</h1>
+            <form action="http://localhost/mysoftware/Admin_panel/"  method="post">
+                <div class="field">
+                    <span class="fa fa-user"> </span>
+                    <input type="text" placeholder="username" required> 
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"> </span>
+                    <input type="password" placeholder="password" required>
+                    <span class="show">SHOW</span> 
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="field">
+                    <input type="submit" value="login" required> 
+                </div>  
+                <div class="signup">
+                    Don't have an account? <a href="http://localhost/mysoftware/">Signup Now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        const pass_field = document.queryselector('.pass');
+        const showbtn = document.queryselector('.show');
+
+        showbtn.addEventListener('click', function(){
+            if(pass_field.type === "password"){
+                pass_field.type = "text";
+                showbtn.textcontent = "HIDE";
+                showbtn.style.color = "#3498db";
+            }
+            else{
+                pass_field.type = "password";
+                showbtn.textcontent = "SHOW";
+                showbtn.style.color = "#222";
+            }
+        });
+    </script>
+</body>
+</html>
